@@ -1,4 +1,10 @@
 # Useful Git Commands
+Git is the most popular version control system (VCS).  
+Not sure that you have it? You can check with
+```
+git --version
+```
+and see if you get a response. Otherwise, download it [here](https://git-scm.com/downloads)
 
 ## Starting your Project
 First create a folder for your project. Move into it and initialize.
@@ -25,5 +31,6 @@ git commit -m "description of changes"
 ```
 
 These commands you will type over and over again.
+
 
 
