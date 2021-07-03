@@ -32,6 +32,10 @@ git commit -m "description of changes"
 
 These commands you will type over and over again.
 
+Note that you don't always want to use `git add <file>` to add a change set to the staging tree. 
+* If you're deleting a file use `git rm <file>`
+* If you're renaming a file use `git mv <old_file> <new_file>`
+
 ## Seeing Changes
 You can see a history of changes by typing,
 ```
@@ -56,12 +60,19 @@ You can see the changes since your last commit by typing,
 ```
 git diff
 ```
-Note that this shows differences between your 'working tree' and 'staged tree'. If you stage those changes with `git add <filename>` then these differences will not be shown because the 'working tree' is the same as the 'staged tree'. To show differences between the staged tree and and repo use,
+Note that this shows differences between your 'working tree' and 'staged tree'. If you stage those changes with `git add <file>` then these differences will not be shown because the 'working tree' is the same as the 'staged tree'. To show differences between the staged tree and and repo use,
 ```
 git diff --staged
 ```
 To clarify, if you have staged *all* your changes with `git add .` then `git diff` won't return any changes. Instead use `git diff --staged`.
 
+## Delete a File
+You can remove a file from a project with,
+```
+git rm <file>
+git commit -m "Removing <file> from project"
+```
+Note that you still need to commit the removal of a file, in the same way you would the addition of a file.
 
 
 
