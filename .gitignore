@@ -1,0 +1,8 @@
+# Ignore this temp file
+.DS_Store
+# Ignore all zip files
+*.zip
+# Ignore all log files
+*.log
+# Ignore all files in my img folder
+img/
