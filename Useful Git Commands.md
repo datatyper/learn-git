@@ -42,6 +42,19 @@ This will show you,
 * Metadata (including the Author and Date of the changes)
 * The commit message (which is why it's important to write descriptive messages when committing)
 
+You can see the changes since your last commit by typing,
+```
+git diff
+```
+Note that this shows differences between your 'working tree' and 'staged tree'. If you stage those changes with `git add <filename>` then these differences will not be shown because the 'working tree' is the same as the 'staged tree'. To show differences between the staged tree and and repo use,
+```
+git diff --staged
+```
+To clarify, if you have staged *all* your changes with `git add .` then `git diff` won't return any changes. Instead use `git diff --staged`.
+
+
+
+
 
 
 
