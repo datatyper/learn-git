@@ -32,7 +32,7 @@ git commit -m "description of changes"
 
 These commands you will type over and over again. In fact, there so common that often it's more convenient to stage and commit in one go. To do this use the -a flag,
 ```
-git commit -a -m "Adding and committing in one go"
+git commit -am "Adding and committing in one go"
 ```
 
 Note that you don't always want to use `git add <file>` to add a change set to the staging tree. 
