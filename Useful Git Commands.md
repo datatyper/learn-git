@@ -39,14 +39,6 @@ Note that you don't always want to use `git add <file>` to add a change set to t
 * If you're deleting a file use `git rm <file>`
 * If you're renaming a file use `git mv <old_file> <new_file>`
 
-## Amend
-Now let's say that I've committed some changes but forgot something that I wanted to include in that commit. This can be done by first staging the changes and then using `git amend`. Or say there is a typo in one of my commit messages. I might do,
-```
-git commit -m "Initial comit"
-git commit --amend -m "Initial commit"
-```
-Warning: this can only be done with the very latest commit.
-
 ## Seeing Changes
 You can see a history of changes by typing,
 ```
@@ -104,7 +96,13 @@ We can also use `git restore` to unstage a file
 git restore --staged <file>
 ```
 
-
+## Amend
+Now let's say that I've committed some changes but forgot something that I wanted to include in that commit. This can be done by first staging the changes and then using `git amend`. Or say there is a typo in one of my commit messages. I might do,
+```
+git commit -m "Initial comit"
+git commit --amend -m "Initial commit"
+```
+Warning: this can only be done with the very latest commit.
 
 
 
