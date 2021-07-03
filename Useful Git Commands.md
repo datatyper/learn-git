@@ -83,6 +83,18 @@ git commit -m "Removing <file> from project"
 ```
 Note that you still need to commit the removal of a file, in the same way you would the addition of a file.
 
+## Undo
+So why bother with all of this? One good reason is to revert back to an earlier state. 
+
+For instance, if we accidentally delete some text in a file or the file in its entirety we can use,
+```
+git restore <file>
+```
+
+We can also use `git restore` to unstage a file
+```
+git restore --staged <file>
+```
 
 
 
