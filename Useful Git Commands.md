@@ -32,5 +32,16 @@ git commit -m "description of changes"
 
 These commands you will type over and over again.
 
+## Seeing Changes
+You can see a history of changes by typing,
+```
+git log
+```
+This will show you,
+* The 40 character SHA value (a label for your set of changes)
+* Metadata (including the Author and Date of the changes)
+* The commit message (which is why it's important to write descriptive messages when committing)
+
+
 
 
