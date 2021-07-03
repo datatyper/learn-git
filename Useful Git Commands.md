@@ -30,7 +30,10 @@ git add .
 git commit -m "description of changes"
 ```
 
-These commands you will type over and over again.
+These commands you will type over and over again. In fact, there so common that often it's more convenient to stage and commit in one go. To do this use the -a flag,
+```
+git commit -a -m "Adding and committing in one go"
+```
 
 Note that you don't always want to use `git add <file>` to add a change set to the staging tree. 
 * If you're deleting a file use `git rm <file>`
@@ -65,6 +68,12 @@ Note that this shows differences between your 'working tree' and 'staged tree'. 
 git diff --staged
 ```
 To clarify, if you have staged *all* your changes with `git add .` then `git diff` won't return any changes. Instead use `git diff --staged`.
+
+By default the changes are colored so that the entire lines are either green (for added) or red (for deleted). Often a more convenient view is to color the individual words. Do this with,
+```
+git diff --color-words
+```
+
 
 ## Delete a File
 You can remove a file from a project with,
