@@ -42,6 +42,16 @@ This will show you,
 * Metadata (including the Author and Date of the changes)
 * The commit message (which is why it's important to write descriptive messages when committing)
 
+My preferred view of the history can be got with,
+```
+git log --oneline --stat -n 3
+```
+where
+* `--oneline` abbreviates the SHA value and removes metadata
+* `--stat` shows the number of changes in each commit 
+* `-n 3` limits the output to the last 3 commits only
+
+
 You can see the changes since your last commit by typing,
 ```
 git diff
