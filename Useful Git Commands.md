@@ -99,8 +99,8 @@ git restore --staged <file>
 ## Amend
 Now let's say that I've committed some changes but forgot something that I wanted to include in that commit. This can be done by first staging the changes and then using `git amend`. Or say there is a typo in one of my commit messages. I might do,
 ```
-git commit -m "My comit message"
-git commit --amend -m "My commit message"
+git commit -m "Initial comit"
+git commit --amend -m "Initial commit"
 ```
 Warning: this can only be done with the very latest commit.
 
