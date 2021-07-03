@@ -98,10 +98,32 @@ For instance, if we accidentally delete some text in a file or the file in its e
 ```
 git restore <file>
 ```
+This will restore the state of the file since our last commit.
+
+If instead we made a change several commits ago that we would like to undo, we can use,
+```
+git revert <sha value>
+```
+This will not delete this commit from our `git log` but instead adds another commit to undo whatever the change was. The default commit message will be something like:  *Revert "Original commit message"*
+
+
 
 We can also use `git restore` to unstage a file
 ```
 git restore --staged <file>
+```
+
+## Ignore
+Finally, there are often lots of files that we don't want to track. For this we can create a .gitignore text file. Each line in the .gitignore file can specify a file or set of files to ignore tracking with git. An example file might be,
+```.gitignore
+# Ignore this temp file
+.DS_Store
+# Ignore all zip files
+*.zip
+# Ignore all log files
+*.log
+# Ignore all files in my img folder
+img/
 ```
 
 
