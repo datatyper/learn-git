@@ -6,7 +6,15 @@ git --version
 ```
 and see if you get a response. Otherwise, download it at [git-scm.com/downloads](https://git-scm.com/downloads)
 
+If you're not sure if the current directory is a git project then you can either look for a .git directory or run,
+```
+git status
+```
+Anything other than,  
+**`> fatal: not a git repository (or any of the parent directories): .git`**
+means that your are in a git tracked project.
 
+In fact you will use `git status` *all* the time to check to check the state of your project (such as which files have been modified, staged, and what to do next - more on this in the next section)
 
 ## Starting your Project
 First create a folder for your project. Move into it and initialize.
@@ -98,26 +106,29 @@ git commit -m "Removing <file> from project"
 Note that you still need to commit the removal of a file, in the same way you would the addition of a file.
 
 ## Undo
-So why bother with all of this? One good reason is to revert back to an earlier state. 
+So why bother with all of this? One good reason is to revert back to an earlier state if you royally f*ck things up / make a mistake and can't be bothered to fix it manually.
 
-For instance, if we accidentally delete some text in a file or the file in its entirety we can use,
+For instance, if our whole project gets corrupted we can use,
+```
+git restore .
+```
+to reset our project to the state at last commit.
+
+If we accidentally delete some text in a file or the file in its entirety we can use,
 ```
 git restore <file>
 ```
-This will restore the state of the file since our last commit.
+This will restore the state of that file since our last commit.
+
+Warning: this will only undo changes that are in our working tree... that is, it will not undo staged changes. So if `git status` shows staged changes that you also want to disregard, first use, `git restore --staged <file>` to unstage the file.
+
 
 If instead we made a change several commits ago that we would like to undo, we can use,
 ```
 git revert <sha value>
 ```
-This will not delete this commit from our `git log` but instead adds another commit to undo whatever the change was. The default commit message will be something like:  *Revert "Original commit message"*
+This will not delete this commit from our `git log` but instead adds another commit to undo whatever the change was. The default commit message will be something like:  *Revert "Original commit message"* 
 
-
-
-We can also use `git restore` to unstage a file
-```
-git restore --staged <file>
-```
 
 ## Ignore
 Finally, there are often lots of files that we don't want to track. For this we can create a .gitignore text file. Each line in the .gitignore file can specify a file or set of files to ignore tracking with git. An example file might be,
