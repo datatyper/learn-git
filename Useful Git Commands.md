@@ -4,7 +4,9 @@ Not sure that you have it? You can check with
 ```
 git --version
 ```
-and see if you get a response. Otherwise, download it [here](https://git-scm.com/downloads)
+and see if you get a response. Otherwise, download it at [git-scm.com/downloads](https://git-scm.com/downloads)
+
+
 
 ## Starting your Project
 First create a folder for your project. Move into it and initialize.
@@ -62,7 +64,7 @@ My preferred view of the history can be got with,
 git log --oneline --stat -n 3
 ```
 where
-* `--oneline` abbreviates the SHA value and removes metadata
+* `--oneline` abbreviates the SHA value and hides metadata
 * `--stat` shows the number of changes in each commit 
 * `-n 3` limits the output to the last 3 commits only
 
@@ -82,6 +84,10 @@ By default the changes are colored so that the entire lines are either green (fo
 git diff --color-words
 ```
 
+As with `git log`, I prefer the condensed view that only shows the lines that changed. This can be achieved with,
+```
+git diff -U0
+```
 
 ## Delete a File
 You can remove a file from a project with,
