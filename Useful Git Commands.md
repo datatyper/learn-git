@@ -1,4 +1,4 @@
-# Useful Git Commands in the __Alternate__ Branch
+# Useful Git Commands
 Git is the most popular version control system (VCS).  
 Not sure that you have it? You can check with
 ```
