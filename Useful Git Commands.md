@@ -168,6 +168,15 @@ When we've finished we can switch back to our master branch with everything left
 git merge alternate
 ```
 
+Other useful branch commands are,
+```
+> git branch                    # to list branches (an * indicates the current branch)
+> git branch -m <old> <new>     # to rename a branch from <old> to <new>
+> git branch -d <new>           # to delete a branch
+```
+
+
+
 
 
 
