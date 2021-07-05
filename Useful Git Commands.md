@@ -63,7 +63,7 @@ You can see a history of changes by typing,
 git log
 ```
 This will show you,
-* The 40 character SHA value (a label for your set of changes)
+* The 40 character SHA-1 hash value (a unique label for your set of changes)
 * Metadata (including the Author and Date of the changes)
 * The commit message (which is why it's important to write descriptive messages when committing)
 
@@ -76,8 +76,21 @@ where
 * `--stat` shows the number of changes in each commit 
 * `-n 3` limits the output to the last 3 commits only
 
+If you want to see the exact changes made in a specific commit you can use,
+```
+git show <sha value>
+```
+Tip: when referring to the sha value you can use as few as four characters (first) to identify that commit.
 
-You can see the changes since your last commit by typing,
+There are more convenient ways to refer to a specific commit. A few examples are shown below with the command git show (though they would also work with `git revert`, `git diff`, etc)
+```
+git show head           # the latest commit
+git show head^          # the parent of the latest commit (i.e. second last commit)
+git show head^^         # the grandparent of the latest commit (i.e. third last commit)
+git show head~3         # the great-grandparent of the latest commit (i.e fourth last commit)
+```
+
+You can see the changes between your working tree (current project) and your last commit by typing,
 ```
 git diff
 ```
