@@ -143,6 +143,30 @@ Finally, there are often lots of files that we don't want to track. For this we 
 img/
 ```
 
+## Branches
+So far so good. We commit 'atomic' changes to out project incrementally, safe in the knowledge that we can do any one of these with a single command. But to really leverage the power of git, you'll want o become familiar with branches.
+
+Let's say that you want to try something ___really___ experimental with your project. Here you will want to create a new branch (an alternate reality if you will) where you can try out new ideas without risk of affecting the master branch/version of the project.
+
+Here's what to do,
+1. Create a new branch
+```
+git branch alternate
+```
+2. Switch to that branch
+```
+git switch alternate
+```
+Now any changes that you make to this project will only apply to this branch! This can be quite liberating - like having infinite lives in a computer game.
+
+3. Make changes (and commits) to the 'alternate' project branch.
+
+When we've finished we can switch back to our master branch with everything left as it was (`git switch master`). 
+
+4. If we want to incorporate those changes (while in the master branch)
+```
+git merge alternate
+```
 
 
 
