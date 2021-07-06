@@ -69,12 +69,23 @@ This will show you,
 
 My preferred view of the history can be got with,
 ```
-git log --oneline --stat -n 3
+git log --oneline --stat -3
 ```
 where
 * `--oneline` abbreviates the SHA value and hides metadata
 * `--stat` shows the number of changes in each commit 
-* `-n 3` limits the output to the last 3 commits only
+* `-n3` or simply `-3` limits the output to the last 3 commits only
+
+Another good way to filter the results is by datetime such as,
+```
+git log --since 2021-07-04T00:00        # Show all commits since the start of July 4th
+git log --since "12 hours ago"          # Show all commits made in the last 12 hours
+git log --until "3 days ago"            # Show all commits up until 3 days ago
+git log --grep "data" -i                # Show all commits with 'data' in the message (case insensitive)
+git log --author Philip                 # Show all commits made by 'Philip'
+git log <file>                          # Show all commits with changes to <file>
+```
+
 
 If you want to see the exact changes made in a specific commit you can use,
 ```
@@ -157,7 +168,7 @@ img/
 ```
 
 ## Branches
-So far so good. We commit 'atomic' changes to out project incrementally, safe in the knowledge that we can do any one of these with a single command. But to really leverage the power of git, you'll want o become familiar with branches.
+So far so good. We commit 'atomic' changes to out project incrementally, safe in the knowledge that we can undo any one of these with a single `git revert <sha value>` if necessary. But to really leverage the power of git, you'll want o become familiar with branches.
 
 Let's say that you want to try something ___really___ experimental with your project. Here you will want to create a new branch (an alternate reality if you will) where you can try out new ideas without risk of affecting the master branch/version of the project.
 
@@ -174,18 +185,18 @@ Now any changes that you make to this project will only apply to this branch! Th
 
 3. Make changes (and commits) to the 'alternate' project branch.
 
-When we've finished we can switch back to our master branch with everything left as it was (`git switch master`). 
+When we've finished we can switch back to our master branch (`git switch master`) with everything preserved the way it was. 
 
 4. If we want to incorporate those changes (while in the master branch)
 ```
 git merge alternate
 ```
-
 Other useful branch commands are,
+
 ```
-> git branch                    # to list branches (an * indicates the current branch)
-> git branch -m <old> <new>     # to rename a branch from <old> to <new>
-> git branch -d <new>           # to delete a branch
+git branch                    # to list branches (an * indicates the current branch)
+git branch -m <old> <new>     # to rename a branch from <old> to <new>
+git branch -d <new>           # to delete a branch
 ```
 
 
