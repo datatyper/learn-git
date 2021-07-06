@@ -175,21 +175,21 @@ Let's say that you want to try something ___really___ experimental with your pro
 Here's what to do,
 1. Create a new branch
 ```
-git branch alternate
+git branch alt_universe
 ```
 2. Switch to that branch
 ```
-git switch alternate
+git switch alt_universe
 ```
 Now any changes that you make to this project will only apply to this branch! This can be quite liberating - like having infinite lives in a computer game.
 
-3. Make changes (and commits) to the 'alternate' project branch.
+3. Make changes (and commits) to the 'alt_universe' project branch.
 
 When we've finished we can switch back to our master branch (`git switch master`) with everything preserved the way it was. 
 
 4. If we want to incorporate those changes (while in the master branch)
 ```
-git merge alternate
+git merge alt_universe
 ```
 Other useful branch commands are,
 
