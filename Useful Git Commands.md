@@ -206,8 +206,7 @@ git diff <old> <new>
 ```
 The command `git diff` works between branches like it would between commits in a single branch.
 
-
-
-
+# Github
+Up until now we've been working with *git* - the version control system. This is not to be confused with github which is a remote server that can host our git projects allowing for collaboration. [Github](https://github.com) is one such host for git projects; others include [GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org)
 
 
