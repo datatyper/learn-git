@@ -194,9 +194,10 @@ git merge alt_universe
 Other useful branch commands are,
 
 ```
-git branch                    # to list branches (an * indicates the current branch)
-git branch -m <old> <new>     # to rename a branch from <old> to <new>
-git branch -d <new>           # to delete a branch
+git branch                  # to list branches (an * indicates the current branch)
+git branch -m <old> <new>   # to rename a branch from <old> to <new>
+git branch -d <new>         # to delete a branch
+git branch --merged         # list all branches with commits in the current branch
 ```
 
 If you come back to a project and forget why a branch was created you can view the differences with,
