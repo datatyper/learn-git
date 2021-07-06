@@ -228,3 +228,15 @@ git push                        # Subsequent pushes
 
 This is a little confusing. You could use `git push origin master` every time. However, by adding the -u the first time, you set *master* as the 'tracking' or default branch. That means every subsequent command can be just `git push`.
 
+## Copy Repo from GitHub
+
+Finally, one of the most common commands you will want to use is `git clone` to steal (I mean contribute to) other people's code. This is very straight forward. First navigate to a folder you want to contain the new project and type,
+```
+git clone https://github.com/trekhleb/learn-python.git
+```
+where the project is the HTTPS url which can be found by clicking on the big green *Code* button on the github page. In fact this is identical to the browser url with `.git` appended.
+
+This command will copy the master branch down onto your local computer.
+
+## Summary
+I hope a quick reference to some of my most used git commands have been helpful. There are literally hundreds more variations on these commands waiting to be explored which I will update with here should they become a regular part of my workflow.
