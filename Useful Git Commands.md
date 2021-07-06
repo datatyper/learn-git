@@ -209,4 +209,22 @@ The command `git diff` works between branches like it would between commits in a
 # Github
 Up until now we've been working with *git* - the version control system. This is not to be confused with github which is a remote server that can host our git projects allowing for collaboration. [Github](https://github.com) is one such host for git projects; others include [GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org)
 
+## Save Repo to Github
+To save a local repository to GitHub so that others can work on it
+1. Create a repository on GitHub.
+2. Add the remote repo to our git project
+```
+git remote add origin https://github.com/<username>/<project>.git
+```
+where `<username>` is your profile name, e.g. *datatyper* and `<project>` is the project name, e.g. *learn-git*
+
+We can check that we've designated a remote repo by typing `git remote` and you should see *origin* pop up in your command line or by typing `git branch -r` or `git branch -a` to see the remote branch, e.g. *origin/master*. Note that you can call the remote repo whatever you like, but 'origin' is convention.
+
+3. Push the changes up to github
+```
+git push -u origin master       # The first time push
+git push                        # Subsequent pushes
+```
+
+This is a little confusing. You could use `git push origin master` every time. However, by adding the -u the first time, you set *master* as the 'tracking' or default branch. That means every subsequent command can be just `git push`.
 
