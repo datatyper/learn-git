@@ -199,7 +199,11 @@ git branch -m <old> <new>     # to rename a branch from <old> to <new>
 git branch -d <new>           # to delete a branch
 ```
 
-
+If you come back to a project and forget why a branch was created you can view the differences with,
+```
+git diff <old> <new>
+```
+The command `git diff` works between branches like it would between commits in a single branch.
 
 
 
